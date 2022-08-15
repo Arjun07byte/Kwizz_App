@@ -1,0 +1,71 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="Theme.Kwizz" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/primaryBlue</item>
+        <item name="colorPrimaryVariant">@color/primaryBlue</item>
+        <item name="colorOnPrimary">@color/whiteFull</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/secondaryBlue</item>
+        <item name="colorSecondaryVariant">@color/secondaryBlue</item>
+        <item name="colorOnSecondary">@color/blackFull</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">#3D18C0</item>
+        <!-- Customize your theme here. -->
+        <item name="android:navigationBarColor">#3D18C0</item>
+        <item name="android:fontFamily">@font/poppins_regular</item>
+    </style>
+
+    <!-- Application Splash Screen Theme-->
+    <style name="Theme.KwizzSplash" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/primaryBlue</item>
+        <item name="colorPrimaryVariant">@color/primaryBlue</item>
+        <item name="colorOnPrimary">@color/whiteFull</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/secondaryBlue</item>
+        <item name="colorSecondaryVariant">@color/secondaryBlue</item>
+        <item name="colorOnSecondary">@color/blackFull</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">#3D18C0</item>
+        <!-- Customize your theme here. -->
+        <item name="android:windowBackground">@drawable/splash_bg</item>
+        <item name="android:navigationBarColor">#3D18C0</item>
+        <item name="android:fontFamily">@font/poppins_regular</item>
+    </style>
+
+    <!-- Application Intro Activity Theme-->
+    <style name="Theme.KwizzIntro" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/primaryBlue</item>
+        <item name="colorPrimaryVariant">@color/primaryBlue</item>
+        <item name="colorOnPrimary">@color/whiteFull</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/secondaryBlue</item>
+        <item name="colorSecondaryVariant">@color/secondaryBlue</item>
+        <item name="colorOnSecondary">@color/blackFull</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">@color/whiteFull</item>
+        <!-- Customize your theme here. -->
+        <item name="android:navigationBarColor">@color/whiteFull</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:fontFamily">@font/poppins_regular</item>
+    </style>
+
+    <!-- Application Home Activity Theme-->
+    <style name="Theme.KwizzHome" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/primaryBlue</item>
+        <item name="colorPrimaryVariant">@color/primaryBlue</item>
+        <item name="colorOnPrimary">@color/whiteFull</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/secondaryBlue</item>
+        <item name="colorSecondaryVariant">@color/secondaryBlue</item>
+        <item name="colorOnSecondary">@color/blackFull</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">#3D18C0</item>
+        <!-- Customize your theme here. -->
+        <item name="android:navigationBarColor">@color/whiteFull</item>
+        <item name="android:fontFamily">@font/poppins_regular</item>
+    </style>
+</resources>

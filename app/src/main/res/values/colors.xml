@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="whiteFull">#FFFFFF</color>
+    <color name="blackFull">#000000</color>
+    <color name="primaryBlue">#220BA1</color>
+    <color name="white50">#80FFFFFF</color>
+    <color name="secondaryBlue">#3D18C0</color>
+    <color name="black25">#40000000</color>
+    <color name="black50">#80000000</color>
+    <color name="redFull">#FF0000</color>
+    <color name="secondaryButtonBg">#00BFFF</color>
+</resources>

@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Kwizz</string>
+    <string name="awesome_layout_intro_text">Awesome layout designs \n Cool Animations</string>
+    <string name="awesome_layout_intro_subheading">Cheer up the regular \n boring quizzing pattern</string>
+    <string name="welcome_text">Welcome</string>
+    <string name="next_text">Next</string>
+    <string name="share_layout_intro_text">Share Quiz Easily</string>
+    <string name="share_layout_intro_subheading">Don’t limit your quiz.\nShare them and keep records</string>
+    <string name="get_started_text">Get Started</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="remember_we_met_earlier_text">Remember ? We met earlier</string>
+    <string name="e_mail_heading_text">E - mail</string>
+</resources>
