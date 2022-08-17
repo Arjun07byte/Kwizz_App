@@ -11,4 +11,15 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="remember_we_met_earlier_text">Remember ? We met earlier</string>
     <string name="e_mail_heading_text">E - mail</string>
+    <string name="enter_your_e_mail_text">Enter Your E-Mail</string>
+    <string name="password_text">Password</string>
+    <string name="enter_your_password_text">Enter Your Password</string>
+    <string name="forgot_password_text">Forgot Password ?</string>
+    <string name="sign_in_text">Sign In</string>
+    <string name="or_text">OR</string>
+    <string name="sign_in_with_google_text">Sign In With Google</string>
+    <string name="register_with_e_mail_text">Register With E-Mail</string>
+    <string name="sign_in_with_e_mail_text">Sign In with E-Mail</string>
+    <string name="sign_up_text">Sign Up</string>
+    <string name="let_s_get_a_new_start_text">Let\'s Get A New Start</string>
 </resources>

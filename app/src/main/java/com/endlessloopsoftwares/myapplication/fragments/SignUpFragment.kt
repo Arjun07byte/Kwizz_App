@@ -16,7 +16,7 @@ import com.google.android.material.button.MaterialButton
 import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.auth.FirebaseAuth
 
-class SignInFragment(
+class SignUpFragment(
     private val currAuthInst: FirebaseAuth,
     private val currActivity: LoginActivity
 ) : Fragment() {
@@ -24,30 +24,30 @@ class SignInFragment(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_sign_in, container, false)
+        return inflater.inflate(R.layout.fragment_sign_up, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val registerEmailButton: MaterialButton = view.findViewById(R.id.register_email_button)
-        registerEmailButton.setOnClickListener {
+        val signInEmailButton: MaterialButton = view.findViewById(R.id.sign_in_email_button)
+        signInEmailButton.setOnClickListener {
             currActivity.supportFragmentManager.beginTransaction()
-                .replace(R.id.login_activity_fragment, SignUpFragment(currAuthInst, currActivity))
+                .replace(R.id.login_activity_fragment, SignInFragment(currAuthInst, currActivity))
                 .commit()
         }
 
         // getting all the views concerned in the sign in fragment
-        val signInButton: MaterialButton = view.findViewById(R.id.sign_in_button)
-        val emailView: EditText = view.findViewById(R.id.e_mail_edit_text_sign_in)
-        val passwordView: EditText = view.findViewById(R.id.password_edit_text_sign_in)
+        val signInButton: MaterialButton = view.findViewById(R.id.sign_up_button)
+        val emailView: EditText = view.findViewById(R.id.e_mail_edit_text_sign_up)
+        val passwordView: EditText = view.findViewById(R.id.password_edit_text_sign_up)
 
-        // setting up the On Click Listener for the sign in button
+        // setting up the On Click Listener for the sign up button
         // to login the user with entered credentials
         signInButton.setOnClickListener {
             val emailEntered = emailView.text.toString()
             val passwordEntered = passwordView.text.toString()
             if (emailEntered.isNotEmpty() && passwordEntered.isNotEmpty()) {
-                currAuthInst.signInWithEmailAndPassword(
+                currAuthInst.createUserWithEmailAndPassword(
                     emailEntered,
                     passwordEntered
                 ).addOnCompleteListener {

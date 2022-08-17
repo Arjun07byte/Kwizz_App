@@ -11,7 +11,7 @@
         android:layout_height="0dp"
         app:layout_constraintBottom_toTopOf="@id/nextButton"
         app:layout_constraintTop_toTopOf="parent"
-        android:scrollbars="none">
+        android:scrollbarThumbVertical="@color/whiteFull">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"

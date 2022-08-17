@@ -20,7 +20,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="106dp"
-        android:text="@string/remember_we_met_earlier_text"
+        android:text="@string/let_s_get_a_new_start_text"
         android:textColor="@color/black25"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -39,7 +39,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/e_mail_edit_text_sign_in"
+        android:id="@+id/e_mail_edit_text_sign_up"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
@@ -68,7 +68,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/password_edit_text_sign_in"
+        android:id="@+id/password_edit_text_sign_up"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
@@ -86,7 +86,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/sign_in_button"
+        android:id="@+id/sign_up_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
@@ -94,7 +94,7 @@
         android:layout_marginEnd="30dp"
         android:paddingTop="8dp"
         android:paddingBottom="8dp"
-        android:text="@string/sign_in_text"
+        android:text="@string/sign_up_text"
         android:textAllCaps="false"
         android:textColor="@color/whiteFull"
         android:textSize="20sp"
@@ -145,7 +145,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/register_email_button"
+        android:id="@+id/sign_in_email_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
@@ -154,7 +154,7 @@
         android:backgroundTint="@color/secondaryButtonBg"
         android:paddingTop="8dp"
         android:paddingBottom="8dp"
-        android:text="@string/register_with_e_mail_text"
+        android:text="@string/sign_in_with_e_mail_text"
         android:textAllCaps="false"
         android:textColor="@color/whiteFull"
         android:textSize="20sp"

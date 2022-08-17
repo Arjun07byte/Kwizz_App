@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "753024159662",
+    "project_id": "kwizz-21686",
+    "storage_bucket": "kwizz-21686.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:753024159662:android:8d69d531ebba28930fc23f",
+        "android_client_info": {
+          "package_name": "com.endlessloopsoftwares.myapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "753024159662-f8mav5jft5tcoepkjr8tpk5r26gjtg55.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAyLkpyfySV7CzXTDU3OrcRcnI3Lu73JBc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "753024159662-f8mav5jft5tcoepkjr8tpk5r26gjtg55.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

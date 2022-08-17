@@ -4,13 +4,17 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="app/src/main/res/drawable/button_blue_secondary.xml" value="0.16" />
+        <entry key="app/src/main/res/drawable/button_blue_secondary_two.xml" value="0.1805" />
+        <entry key="app/src/main/res/drawable/button_red_secondary.xml" value="0.1805" />
         <entry key="app/src/main/res/drawable/edit_text_bg.xml" value="0.1805" />
         <entry key="app/src/main/res/drawable/splash_bg.xml" value="0.1805" />
+        <entry key="app/src/main/res/layout/activity_home.xml" value="0.14492753623188406" />
         <entry key="app/src/main/res/layout/activity_intro.xml" value="0.18" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.14492753623188406" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_quiz.xml" value="0.14492753623188406" />
-        <entry key="app/src/main/res/layout/fragment_sign_in.xml" value="0.21" />
+        <entry key="app/src/main/res/layout/fragment_sign_in.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/fragment_sign_up.xml" value="0.2" />
       </map>
     </option>
   </component>

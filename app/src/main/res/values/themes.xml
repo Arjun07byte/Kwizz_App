@@ -14,6 +14,7 @@
         <!-- Customize your theme here. -->
         <item name="android:navigationBarColor">#3D18C0</item>
         <item name="android:fontFamily">@font/poppins_regular</item>
+        <item name="fontFamily">@font/poppins_regular</item>
     </style>
 
     <!-- Application Splash Screen Theme-->
@@ -32,6 +33,7 @@
         <item name="android:windowBackground">@drawable/splash_bg</item>
         <item name="android:navigationBarColor">#3D18C0</item>
         <item name="android:fontFamily">@font/poppins_regular</item>
+        <item name="fontFamily">@font/poppins_regular</item>
     </style>
 
     <!-- Application Intro Activity Theme-->
@@ -50,6 +52,7 @@
         <item name="android:navigationBarColor">@color/whiteFull</item>
         <item name="android:windowLightStatusBar">true</item>
         <item name="android:fontFamily">@font/poppins_regular</item>
+        <item name="fontFamily">@font/poppins_regular</item>
     </style>
 
     <!-- Application Home Activity Theme-->
@@ -67,5 +70,6 @@
         <!-- Customize your theme here. -->
         <item name="android:navigationBarColor">@color/whiteFull</item>
         <item name="android:fontFamily">@font/poppins_regular</item>
+        <item name="fontFamily">@font/poppins_regular</item>
     </style>
 </resources>
