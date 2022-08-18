@@ -19,11 +19,17 @@ class IntroActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_intro)
 
+        setUpVarAndButtons()
+    }
+
+    private fun setUpVarAndButtons() {
+        // setting up the variables according to the views
         nextButton = findViewById(R.id.nextButton)
         heading = findViewById(R.id.intro_heading)
         subHeading = findViewById(R.id.intro_subheading)
         lottieAnimView = findViewById(R.id.lottie_view)
 
+        // setting up the onClickListener of the nextButton
         nextButton.setOnClickListener { changeIntro() }
     }
 
@@ -41,8 +47,8 @@ class IntroActivity : AppCompatActivity() {
                 "com.endlessloopsoftwares.myapplication",
                 MODE_PRIVATE
             )
-            mySharedPreferences.edit().putString("Login State","Done Intro").apply()
-            startActivity(Intent(this,LoginActivity::class.java))
+            mySharedPreferences.edit().putString("Login State", "Done Intro").apply()
+            startActivity(Intent(this, LoginActivity::class.java))
             finish()
         }
     }

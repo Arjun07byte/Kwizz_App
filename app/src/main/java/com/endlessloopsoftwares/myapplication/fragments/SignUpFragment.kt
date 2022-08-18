@@ -1,5 +1,6 @@
 package com.endlessloopsoftwares.myapplication.fragments
 
+import android.app.Activity
 import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Bundle
@@ -8,13 +9,19 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.EditText
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import com.endlessloopsoftwares.myapplication.R
 import com.endlessloopsoftwares.myapplication.activities.HomeActivity
 import com.endlessloopsoftwares.myapplication.activities.LoginActivity
+import com.google.android.gms.auth.api.signin.GoogleSignIn
+import com.google.android.gms.auth.api.signin.GoogleSignInClient
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions
+import com.google.android.gms.common.api.ApiException
 import com.google.android.material.button.MaterialButton
 import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.GoogleAuthProvider
 
 class SignUpFragment(
     private val currAuthInst: FirebaseAuth,
@@ -27,8 +34,13 @@ class SignUpFragment(
         return inflater.inflate(R.layout.fragment_sign_up, container, false)
     }
 
+    private lateinit var myGoogleSignInClient: GoogleSignInClient
+    private lateinit var currView: View
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        // changing the fragment when user clicks on the sign in with email button
         val signInEmailButton: MaterialButton = view.findViewById(R.id.sign_in_email_button)
         signInEmailButton.setOnClickListener {
             currActivity.supportFragmentManager.beginTransaction()
@@ -40,6 +52,8 @@ class SignUpFragment(
         val signInButton: MaterialButton = view.findViewById(R.id.sign_up_button)
         val emailView: EditText = view.findViewById(R.id.e_mail_edit_text_sign_up)
         val passwordView: EditText = view.findViewById(R.id.password_edit_text_sign_up)
+        val googleSignInButton: MaterialButton = view.findViewById(R.id.sign_in_google_button)
+        currView = view
 
         // setting up the On Click Listener for the sign up button
         // to login the user with entered credentials
@@ -78,5 +92,55 @@ class SignUpFragment(
                 ).show()
             }
         }
+
+        // setting up the signInWithGoogle feature
+        setUpGoogleSignInVar()
+        googleSignInButton.setOnClickListener { callGoogleSignIn() }
+    }
+
+    private fun setUpGoogleSignInVar() {
+        val myGoogleSignInOptions = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+            .requestIdToken(getString(R.string.default_web_client_id))
+            .requestEmail()
+            .build()
+
+        myGoogleSignInClient = GoogleSignIn.getClient(currActivity, myGoogleSignInOptions)
+    }
+
+    private fun callGoogleSignIn() {
+        val signInIntent = myGoogleSignInClient.signInIntent
+        myStartActivityForResult.launch(signInIntent)
+    }
+
+    private val myStartActivityForResult = registerForActivityResult(
+        ActivityResultContracts.StartActivityForResult()
+    ) { activityResult ->
+        if (activityResult.resultCode == Activity.RESULT_OK) {
+            val receivedData = GoogleSignIn.getSignedInAccountFromIntent(activityResult.data)
+            try {
+                val accountSignedIn = receivedData.result
+                authGoogleIdWithFirebase(accountSignedIn.idToken)
+            } catch (exceptionOccurred: ApiException) {
+                Snackbar.make(
+                    currView,
+                    "Unable to Sign In $exceptionOccurred",
+                    Snackbar.LENGTH_SHORT
+                ).show()
+            }
+        }
+    }
+
+    private fun authGoogleIdWithFirebase(idToken: String?) {
+        val userCredentials = GoogleAuthProvider.getCredential(idToken, null)
+        currAuthInst.signInWithCredential(userCredentials)
+            .addOnCompleteListener(currActivity) { taskReturned ->
+                if (taskReturned.isSuccessful) {
+                    val homeActivityIntent = Intent(currActivity, HomeActivity::class.java)
+                    startActivity(homeActivityIntent)
+                    currActivity.finish()
+                } else {
+                    Snackbar.make(currView, "Sign In failed", Snackbar.LENGTH_SHORT).show()
+                }
+            }
     }
 }
